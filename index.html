@@ -1,35 +1,52 @@
-<!-- นี่คือโครงสร้างหน้าเว็บทังหมด  -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
-<style>
-body {
-background-color: #afbfff; color: #333 ;
-text-align: center; padding: 50px;
-
-}
-.card {
-background: white; border-radius: 50px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 50px;
-<div class="project-card">
-<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ </h3>
-<p>รายละเอียดชิ้นงานนี้ : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
-</div>
-}
-h1 { color: #2c3e50; }
-p { font-size: 50px; line-height: 1.6; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีครับ! ฉันชื่อ <strong>ลูกศร สุขเจริญโชคดี (looksorn Sukjarernchokdee)</strong></p>
-<p>ขณะนี้กำลังศึกษา/สนใจด้าน Medical</p>
-<p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages!</p>
-</div>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul>
+                <li><a href="#about">เกี่ยวกับฉัน</a></li>
+                <li><a href="#projects">ผลงาน</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="hero">
+            <h1>ยินดีต้อนรับ! ฉันคือ <span class="highlight">นักพัฒนาเว็บ</span></h1>
+            <p>ชอบการเขียนโค้ดและสร้างสรรค์สิ่งใหม่ๆ บนโลกอินเทอร์เน็ต</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>ผลงานของฉัน</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>โปรเจกต์ที่ 1</h3>
+                <p>รายละเอียดสั้นๆ เกี่ยวกับระบบที่พัฒนา</p>
+            </div>
+            <div class="project-card">
+                <h3>โปรเจกต์ที่ 2</h3>
+                <p>รายละเอียดสั้นๆ เกี่ยวกับแอปพลิเคชัน</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>ช่องทางการติดต่อ</h2>
+        <p>อีเมล: email@example.com</p>
+        <button id="clickBtn">ทักทายฉัน!</button>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
 
