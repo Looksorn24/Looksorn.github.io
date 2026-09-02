@@ -3,50 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio - Looksorn Sukjarernchokdee</title>
+    <link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* กำหนดค่าพื้นฐานของหน้าเว็บ */
+        body {
+            background-color: #FF69B4; /* สีพื้นหลังชมพูสด */
+            font-family: 'TH Sarabun New', sans-serif;
+            font-size: 22px; /* ปรับขนาดฟอนต์ให้พอดีกับ Sarabun */
+            color: #000000; /* สีตัวอักษรหลักเป็นสีดำ */
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* หัวข้อหลักตรงกลางหน้าแรก */
+        .main-title {
+            color: #dc6986;
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* เติมเงาให้ตัวอักษรอ่านง่ายขึ้น */
+        }
+
+        /* รูปแบบกล่องข้อความโปร่งแสง */
+        .card {
+            background-color: rgba(255, 255, 255, 0.7); /* สีขาวอ่อนบาง (โปร่งแสง 70%) */
+            border-radius: 15px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        /* หัวข้อภายในกล่อง */
+        .card-title {
+            color: #dc6986;
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #dc6986;
+            padding-bottom: 5px;
+        }
+
+        /* กรอบสำหรับรูปโปรไฟล์ */
+        .profile-img-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* ทำรูปเป็นทรงกลม */
+            object-fit: cover;
+            border: 4px solid #dc6986;
+        }
+
+        /* ลิงก์ไปยังหน้าที่สอง */
+        .work-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #dc6986;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .work-link:hover {
+            background-color: #c5516f;
+        }
+
+        /* ตกแต่งส่วนรายการติดต่อ */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-item i {
+            color: #dc6986;
+            font-size: 24px;
+            margin-right: 15px;
+            width: 25px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul>
-                <li><a href="#about">เกี่ยวกับฉัน</a></li>
-                <li><a href="#projects">ผลงาน</a></li>
-                <li><a href="#contact">ติดต่อ</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <div class="hero">
-            <h1>ยินดีต้อนรับ! ฉันคือ <span class="highlight">นักพัฒนาเว็บ</span></h1>
-            <p>ชอบการเขียนโค้ดและสร้างสรรค์สิ่งใหม่ๆ บนโลกอินเทอร์เน็ต</p>
+    <h1 class="main-title">Welcome to my portfolio</h1>
+
+    <div class="card">
+        <h2 class="card-title">ข้อมูลส่วนตัวของฉัน</h2>
+        
+        <div class="profile-img-container">
+            <img src="your-photo.jpg" alt="รูปภาพของฉัน" class="profile-img">
         </div>
-    </section>
 
-    <section id="projects">
-        <h2>ผลงานของฉัน</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>โปรเจกต์ที่ 1</h3>
-                <p>รายละเอียดสั้นๆ เกี่ยวกับระบบที่พัฒนา</p>
-            </div>
-            <div class="project-card">
-                <h3>โปรเจกต์ที่ 2</h3>
-                <p>รายละเอียดสั้นๆ เกี่ยวกับแอปพลิเคชัน</p>
-            </div>
+        <p><strong>ชื่อ-นามสกุล:</strong> นางสาวลูกศร สุขเจริญโชคดี</p>
+        <p><strong>ชื่อเล่น:</strong> ปิ่น</p>
+        <p><strong>Name:</strong> Looksorn Sukjarernchokdee</p>
+        <p><strong>ระดับการศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+        <p><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">เป้าหมายและความสนใจในการศึกษาต่อ</h2>
+        <p>ฉันมีความสนใจที่จะศึกษาต่อ คณะรัฐศาสตร์ สาขาการเมืองการปกครอง จุฬาลงกรณ์มหาวิทยาลัย</p>
+        <p>ตั้งแต่ระดับมัธยมศึกษาปีที่ 4 ฉันมีความสนใจในด้านการเมืองและประวัติศาสตร์ และได้เข้าร่วมกิจกรรมของคณะรัฐศาสตร์ ซึ่งในกิจกรรมได้เรียนรู้เกี่ยวกับประวัติศาสตร์การเมือง ทำให้เกิดความชอบและสนใจในสายอาชีพนี้ขึ้น หลังจากนั้นจึงได้ศึกษาเกี่ยวกับการเรียน รวมถึงการประกอบอาชีพ และเกิดความตั้งใจอย่างจริงจังที่จะศึกษาต่อในคณะรัฐศาสตร์</p>
+    </div>
+
+    <div class="card" style="text-align: center;">
+        <h2 class="card-title" style="text-align: left;">ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
+        <p style="text-align: left;">คลิกปุ่มด้านล่างเพื่อรับชมผลงานและกิจกรรมทั้งหมดของฉัน</p>
+        <a href="works.html" class="work-link">ดูผลงานและกิจกรรมทั้งหมด <i class="fa-solid =>-arrow-right"></i></a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">ช่องทางการติดต่อ</h2>
+        <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><strong>เบอร์โทรศัพท์:</strong> 0993872658</span>
         </div>
-    </section>
+        <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><strong>Gmail:</strong> s34329@banbung.ac.th</span>
+        </div>
+    </div>
 
-    <section id="contact">
-        <h2>ช่องทางการติดต่อ</h2>
-        <p>อีเมล: email@example.com</p>
-        <button id="clickBtn">ทักทายฉัน!</button>
-    </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
-
