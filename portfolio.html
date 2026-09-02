@@ -2,38 +2,137 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงานของฉัน  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - นางสาวลูกศร สุขเจริญโชคดี</title>
+<link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: #9999CC; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+* {
+box-sizing: border-box;
+font-family: 'TH Sarabun New', sans-serif;
+font-size: 22px;
+}
+
+body {
+background-color: #FF69B4;
+margin: 0;
+padding: 40px 20px;
+color: #000000;
+}
+
+/* หัวข้อหลักตรงกลาง */
+.main-title {
+text-align: center;
+color: #dc6986;
+font-size: 48px;
+font-weight: bold;
+margin-bottom: 30px;
+}
+
+/* กล่องข้อความพื้นหลังขาวอ่อนบาง */
+.card {
+background-color: rgba(255, 255, 255, 0.85);
+max-width: 800px;
+margin: 0 auto 25px auto;
+padding: 25px;
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+color: #dc6986;
+font-size: 32px;
+margin-top: 0;
+margin-bottom: 15px;
+border-bottom: 2px solid #dc6986;
+padding-bottom: 5px;
+}
+
+/* กรอบใส่รูปภาพ */
+.profile-img-container {
+text-align: center;
+margin: 15px 0;
+}
+
+.profile-img {
+width: 180px;
+height: 180px;
+object-fit: cover;
+border-radius: 50%;
+border: 4px solid #dc6986;
+}
+
+/* ปุ่มกดไปหน้าที่ 2 */
+.btn-link {
+display: inline-block;
+background-color: #dc6986;
+color: white !important;
+padding: 10px 25px;
+text-decoration: none;
+border-radius: 25px;
+font-size: 24px;
+font-weight: bold;
+transition: 0.3s;
+margin-top: 10px;
+}
+
+.btn-link:hover {
+background-color: #c5526f;
+}
+
+.contact-item {
+margin: 10px 0;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.contact-item i {
+color: #dc6986;
+font-size: 24px;
+}
 </style>
 </head>
 <body>
-<div class="container">
-<h1> แฟ้มสะสมงาน (Portfolio)</h1>
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
-<!-- กล่องผลงานชิ้นที่ 1 -->
-<div class="project-card">
-<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ </h3>
-<p>รายละเอียดชิ้นงานนี้ : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
+
+<h1 class="main-title">Welcome to my portfolio</h1>
+
+<div class="card">
+<h2>ข้อมูลส่วนตัวของฉัน</h2>
+<div class="profile-img-container">
+<img src="https://via.placeholder.com/180" alt="รูปภาพของลูกศร" class="profile-img">
 </div>
-<!-- กล่องผลงานชิ้นที่ 2 -->
-<div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดชิ้นงานนี้ : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
+<p><strong>ชื่อ-นามสกุล:</strong> นางสาวลูกศร สุขเจริญโชคดี</p>
+<p><strong>ชื่อเล่น:</strong> ปิ่น</p>
+<p><strong>Name:</strong> Looksorn Sukjarernchokdee</p>
+<p><strong>การศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+<p><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
 </div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
+
+<div class="card">
+<h2>เป้าหมายและความสนใจในการศึกษาต่อ</h2>
+<p>ตั้งแต่ระดับมัธยมศึกษาปีที่ 4 ฉันได้มีโอกาสไป Open House ของมหาวิทยาลัยมหิดล และได้เข้าร่วมกิจกรรมของคณะเภสัชศาสตร์ ซึ่งในกิจกรรมได้เรียนรู้เกี่ยวกับการปรุงยา ปฏิกิริยาการทำงานของยาแต่ละชนิด รวมถึงได้จำลองการจ่ายยาให้กับผู้ป่วย ทำให้เกิดความชอบและความสนใจในสายอาชีพนี้ขึ้นมาอย่างจริงจัง</p>
+<p>หลังจากนั้นจึงได้ศึกษาเพิ่มเติมเกี่ยวกับการเรียนเภสัชศาสตร์และการประกอบอาชีพ จนเกิดความตั้งใจอย่างมุ่งมั่นที่จะศึกษาต่อในคณะเภสัชศาสตร์</p>
 </div>
+
+<div class="card" style="text-align: center;">
+<h2>ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
+<p>คลิกที่ปุ่มด้านล่างเพื่อรับชมผลงานและกิจกรรมทั้งหมดของฉัน</p>
+<a href="portfolio.html" class="btn-link">ดูผลงานและกิจกรรม</a>
+</div>
+
+<div class="card">
+<h2>ช่องทางการติดต่อ</h2>
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<span><strong>เบอร์โทรศัพท์:</strong> 0993872658</span>
+</div>
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<span><strong>Gmail:</strong> s34329@banbung.ac.th</span>
+</div>
+</div>
+
 </body>
 </html>
-<div class="project-card">
-<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ </h3>
-<p>รายละเอียดชิ้นงานนี้ : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
-</div>
