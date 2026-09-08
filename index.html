@@ -3,145 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Looksorn Sukjarernchokdee</title>
-    <link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* กำหนดค่าพื้นฐานของหน้าเว็บ */
-        body {
-            background-color: #FF69B4; /* สีพื้นหลังชมพูสด */
-            font-family: 'TH Sarabun New', sans-serif;
-            font-size: 22px; /* ปรับขนาดฟอนต์ให้พอดีกับ Sarabun */
-            color: #000000; /* สีตัวอักษรหลักเป็นสีดำ */
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        /* หัวข้อหลักตรงกลางหน้าแรก */
-        .main-title {
-            color: #dc6986;
-            text-align: center;
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* เติมเงาให้ตัวอักษรอ่านง่ายขึ้น */
-        }
+    <title>Welcome to my portfolio</title>
 
-        /* รูปแบบกล่องข้อความโปร่งแสง */
-        .card {
-            background-color: rgba(255, 255, 255, 0.7); /* สีขาวอ่อนบาง (โปร่งแสง 70%) */
-            border-radius: 15px;
-            padding: 25px 30px;
-            margin-bottom: 25px;
-            width: 100%;
-            max-width: 700px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-        }
-
-        /* หัวข้อภายในกล่อง */
-        .card-title {
-            color: #dc6986;
-            font-size: 32px;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #dc6986;
-            padding-bottom: 5px;
-        }
-
-        /* กรอบสำหรับรูปโปรไฟล์ */
-        .profile-img-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%; /* ทำรูปเป็นทรงกลม */
-            object-fit: cover;
-            border: 4px solid #dc6986;
-        }
-
-        /* ลิงก์ไปยังหน้าที่สอง */
-        .work-link {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #dc6986;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .work-link:hover {
-            background-color: #c5516f;
-        }
-
-        /* ตกแต่งส่วนรายการติดต่อ */
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .contact-item i {
-            color: #dc6986;
-            font-size: 24px;
-            margin-right: 15px;
-            width: 25px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <h1 class="main-title">Welcome to my portfolio</h1>
+<body class="home-page">
 
-    <div class="card">
-        <h2 class="card-title">ข้อมูลส่วนตัวของฉัน</h2>
-        
-        <div class="profile-img-container">
-            <img src="your-photo.jpg" alt="รูปภาพของฉัน" class="profile-img">
-        </div>
+    <!-- หัวข้อหลัก -->
+    <header class="main-header">
+        <h1>Welcome to my portfolio</h1>
+    </header>
 
-        <p><strong>ชื่อ-นามสกุล:</strong> นางสาวลูกศร สุขเจริญโชคดี</p>
-        <p><strong>ชื่อเล่น:</strong> ปิ่น</p>
-        <p><strong>Name:</strong> Looksorn Sukjarernchokdee</p>
-        <p><strong>ระดับการศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
-        <p><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
-    </div>
 
-    <div class="card">
-        <h2 class="card-title">เป้าหมายและความสนใจในการศึกษาต่อ</h2>
-        <p>ฉันมีความสนใจที่จะศึกษาต่อ คณะรัฐศาสตร์ สาขาการเมืองการปกครอง จุฬาลงกรณ์มหาวิทยาลัย</p>
-        <p>ตั้งแต่ระดับมัธยมศึกษาปีที่ 4 ฉันมีความสนใจในด้านการเมืองและประวัติศาสตร์ และได้เข้าร่วมกิจกรรมของคณะรัฐศาสตร์ ซึ่งในกิจกรรมได้เรียนรู้เกี่ยวกับประวัติศาสตร์การเมือง ทำให้เกิดความชอบและสนใจในสายอาชีพนี้ขึ้น หลังจากนั้นจึงได้ศึกษาเกี่ยวกับการเรียน รวมถึงการประกอบอาชีพ และเกิดความตั้งใจอย่างจริงจังที่จะศึกษาต่อในคณะรัฐศาสตร์</p>
-    </div>
+    <main class="container">
 
-    <div class="card" style="text-align: center;">
-        <h2 class="card-title" style="text-align: left;">ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
-        <p style="text-align: left;">คลิกปุ่มด้านล่างเพื่อรับชมผลงานและกิจกรรมทั้งหมดของฉัน</p>
-        <a href="works.html" class="work-link">ดูผลงานและกิจกรรมทั้งหมด <i class="fa-solid =>-arrow-right"></i></a>
-    </div>
+        <!-- กล่องที่ 1 : ข้อมูลส่วนตัว -->
+        <section class="card">
 
-    <div class="card">
-        <h2 class="card-title">ช่องทางการติดต่อ</h2>
-        <div class="contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span><strong>เบอร์โทรศัพท์:</strong> 0993872658</span>
-        </div>
-        <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span><strong>Gmail:</strong> s34329@banbung.ac.th</span>
-        </div>
-    </div>
+            <h2>ข้อมูลส่วนตัวของฉัน</h2>
+
+            <!-- รูปภาพของฉัน -->
+            <div class="profile-image">
+                <img src="images/profile.jpg" alt="รูปภาพของลูกศร">
+            </div>
+
+            <div class="personal-info">
+                <p>ชื่อ นางสาวลูกศร สุขเจริญโชคดี</p>
+                <p>ชื่อเล่น ปิ่น</p>
+                <p>Name Looksorn Sukjarernchokdee</p>
+                <p>กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+                <p>แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
+            </div>
+
+        </section>
+
+
+        <!-- กล่องที่ 2 : เป้าหมายและความสนใจ -->
+        <section class="card">
+
+            <h2>เป้าหมายและความสนใจในการศึกษาต่อ</h2>
+
+            <div class="text-content">
+
+                <p>
+                    ฉันมีความสนใจที่จะศึกษาต่อ คณะรัฐศาสตร์
+                    สาขาการเมืองการปกครอง จุฬาลงกรณ์มหาวิทยาลัย
+                </p>
+
+                <p>
+                    ตั้งแต่ระดับมัธยมศึกษาปีที่ 4 ฉันมีความสนใจในด้านการเมืองและประวัติศาสตร์
+                    และได้เข้าร่วมกิจกรรมของคณะรัฐศาสตร์ ซึ่งในกิจกรรมได้เรียนรู้เกี่ยวกับประวัติศาสตร์การเมือง
+                    ทำให้เกิดความชอบและสนใจในสายอาชีพนี้ขึ้น
+                </p>
+
+                <p>
+                    หลังจากนั้นจึงได้ศึกษาเกี่ยวกับการเรียนคณะรัฐศาสตร์
+                    รวมถึงการประกอบอาชีพ และจึงเกิดความตั้งใจที่จะศึกษาต่อในคณะรัฐศาสตร์
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- กล่องที่ 3 : ผลงานและกิจกรรม -->
+        <section class="card activity-card">
+
+            <h2>ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
+
+            <p class="activity-description">
+                รวมผลงานและกิจกรรมที่ได้เข้าร่วม
+            </p>
+
+            <a href="portfolio.html" class="portfolio-button">
+                ดูผลงานและกิจกรรม
+            </a>
+
+        </section>
+
+
+        <!-- กล่องที่ 4 : ช่องทางการติดต่อ -->
+        <section class="card">
+
+            <h2>ช่องทางการติดต่อ</h2>
+
+            <div class="contact-info">
+
+                <p>
+                    ☎️ เบอร์โทรศัพท์ : 0993872658
+                </p>
+
+                <p>
+                    📷 Instagram : User7890
+                </p>
+
+                <p>
+                    📘 Facebook : Pin Liee
+                </p>
+
+                <p>
+                    ✉️ Gmail : s34329@banbung.ac.th
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- กล่องที่ 5 : ประวัติการศึกษา -->
+        <section class="card education-card">
+
+            <h2>ประวัติการศึกษา</h2>
+
+            <div class="education-info">
+
+                <p>
+                    ประถมศึกษา : โรงเรียนบุญประทีปวิทยาคาร
+                </p>
+
+                <p>
+                    มัธยมศึกษาตอนต้น :
+                    โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+                </p>
+
+                <p>
+                    มัธยมศึกษาตอนปลาย :
+                    โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ส่วนท้าย -->
+    <footer>
+        <p>© 2026 Looksorn Sukjarernchokdee</p>
+    </footer>
 
 </body>
 </html>
