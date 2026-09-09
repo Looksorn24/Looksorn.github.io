@@ -3,147 +3,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Portfolio - ปิ่น</title>
 
-    <title>Welcome to my portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        body {
+            font-family: "Tahoma", "Arial", sans-serif;
+            color: #333;
+            background: #cceeff;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           หน้าแรก
+        ========================= */
+
+        .page {
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            color: #2574a9;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #557;
+            font-size: 18px;
+        }
+
+        .box {
+            background: white;
+            border-radius: 22px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(70, 130, 160, 0.15);
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+
+        .box h2 {
+            color: #287ca8;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .blue-box {
+            background: #eaf9ff;
+        }
+
+        .pastel-blue {
+            background: #ccecff;
+        }
+
+        .pink-box {
+            background: #ffe3ec;
+        }
+
+        .pastel-pink {
+            background: #ffd1df;
+        }
+
+        .info {
+            font-size: 18px;
+        }
+
+        .info strong {
+            color: #26749b;
+        }
+
+        .contact-item {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contact-icon {
+            display: inline-flex;
+            width: 35px;
+            height: 35px;
+            background: white;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+        }
+
+        /* ปุ่ม */
+
+        .button-area {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            background: #4da9d8;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 5px 12px rgba(60, 130, 170, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #318fbe;
+        }
+
+        .pink-btn {
+            background: #e98da9;
+        }
+
+        .pink-btn:hover {
+            background: #d97091;
+        }
+
+        /* =========================
+           หน้าผลงาน
+        ========================= */
+
+        #portfolioPage {
+            display: none;
+            background: #ffe1eb;
+            min-height: 100vh;
+        }
+
+        #portfolioPage .hero h1 {
+            color: #c45b7d;
+        }
+
+        .portfolio-box {
+            background: #fff5f8;
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(180, 100, 130, 0.15);
+        }
+
+        .portfolio-box h2 {
+            color: #c45b7d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .certificate {
+            height: 230px;
+            background: #f8dce6;
+            border: 3px dashed #d88da5;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #9c5b70;
+            overflow: hidden;
+        }
+
+        .certificate img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .volunteer-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .volunteer-grid .certificate {
+            width: 70%;
+            max-width: 600px;
+            height: 300px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+        }
+
+        /* =========================
+           Responsive
+        ========================= */
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .certificate-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .volunteer-grid .certificate {
+                width: 100%;
+            }
+
+            .box,
+            .portfolio-box {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
-<body class="home-page">
+<body>
 
-    <!-- หัวข้อหลัก -->
-    <header class="main-header">
-        <h1>Welcome to my portfolio</h1>
-    </header>
+    <!-- =========================
+         หน้าแรก
+    ========================= -->
 
+    <section id="homePage" class="page">
+        <div class="container">
 
-    <main class="container">
-
-        <!-- กล่องที่ 1 : ข้อมูลส่วนตัว -->
-        <section class="card">
-
-            <h2>ข้อมูลส่วนตัวของฉัน</h2>
-
-            <!-- รูปภาพของฉัน -->
-            <img src="profile.jpg" alt="รูปภาพของฉัน"
-                <img src="images/profile.jpg" alt="รูปภาพของลูกศร">
+            <div class="hero">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Portfolio ของ นางสาว ลูกศร สุขเจริญโชคดี</p>
             </div>
 
-            <div class="personal-info">
-                <p>ชื่อ นางสาวลูกศร สุขเจริญโชคดี</p>
-                <p>ชื่อเล่น ปิ่น</p>
-                <p>Name Looksorn Sukjarernchokdee</p>
-                <p>กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
-                <p>แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
+            <!-- กล่องที่ 1 -->
+            <div class="box blue-box">
+                <h2>👩🏻 ข้อมูลส่วนตัวของฉัน</h2>
+
+                <div class="info">
+                    <p><strong>ชื่อ :</strong> นางสาว ลูกศร สุขเจริญโชคดี</p>
+                    <p><strong>ชื่อเล่น :</strong> ปิ่น</p>
+                    <p><strong>ระดับชั้น :</strong> มัธยมศึกษาปีที่ 6</p>
+                    <p><strong>แผนการเรียน :</strong> MSEP</p>
+                </div>
             </div>
 
-        </section>
+            <!-- กล่องที่ 2 -->
+            <div class="box pastel-blue">
+                <h2>🏠 ที่อยู่ปัจจุบัน</h2>
 
-
-        <!-- กล่องที่ 2 : เป้าหมายและความสนใจ -->
-        <section class="card">
-
-            <h2>เป้าหมายและความสนใจในการศึกษาต่อ</h2>
-
-            <div class="text-content">
-
-                <p>
-                    ฉันมีความสนใจที่จะศึกษาต่อ คณะรัฐศาสตร์
-                    สาขาการเมืองการปกครอง จุฬาลงกรณ์มหาวิทยาลัย
-                </p>
-
-                <p>
-                    ตั้งแต่ระดับมัธยมศึกษาปีที่ 4 ฉันมีความสนใจในด้านการเมืองและประวัติศาสตร์
-                    และได้เข้าร่วมกิจกรรมของคณะรัฐศาสตร์ ซึ่งในกิจกรรมได้เรียนรู้เกี่ยวกับประวัติศาสตร์การเมือง
-                    ทำให้เกิดความชอบและสนใจในสายอาชีพนี้ขึ้น
-                </p>
-
-                <p>
-                    หลังจากนั้นจึงได้ศึกษาเกี่ยวกับการเรียนคณะรัฐศาสตร์
-                    รวมถึงการประกอบอาชีพ และจึงเกิดความตั้งใจที่จะศึกษาต่อในคณะรัฐศาสตร์
-                </p>
-
+                <div class="info">
+                    <p>
+                        82/9 หมู่ที่ 3 ตำบลบ้านบึง
+                        อำเภอบ้านบึง จังหวัดชลบุรี 20170
+                    </p>
+                </div>
             </div>
 
-        </section>
+            <!-- กล่องที่ 3 -->
+            <div class="box blue-box">
+                <h2>🎓 ประวัติการศึกษา</h2>
 
+                <div class="info">
+                    <p>
+                        <strong>ชั้นประถมศึกษา</strong><br>
+                        โรงเรียนบุญประทีปวิทยาคาร
+                    </p>
 
-        <!-- กล่องที่ 3 : ผลงานและกิจกรรม -->
-        <section class="card activity-card">
+                    <br>
 
-            <h2>ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
+                    <p>
+                        <strong>ชั้นมัธยมศึกษาตอนต้น</strong><br>
+                        โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"<br>
+                        GPAX : 3.98
+                    </p>
 
-            <p class="activity-description">
-                รวมผลงานและกิจกรรมที่ได้เข้าร่วม
-            </p>
+                    <br>
 
-            <a href="portfolio.html" class="portfolio-button">
-                ดูผลงานและกิจกรรม
-            </a>
-
-        </section>
-
-
-        <!-- กล่องที่ 4 : ช่องทางการติดต่อ -->
-        <section class="card">
-
-            <h2>ช่องทางการติดต่อ</h2>
-
-            <div class="contact-info">
-
-                <p>
-                    ☎️ เบอร์โทรศัพท์ : 0993872658
-                </p>
-
-                <p>
-                    📷 Instagram : User7890
-                </p>
-
-                <p>
-                    📘 Facebook : Pin Liee
-                </p>
-
-                <p>
-                    ✉️ Gmail : s34329@banbung.ac.th
-                </p>
-
+                    <p>
+                        <strong>ชั้นมัธยมศึกษาตอนปลาย</strong><br>
+                        โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"<br>
+                        GPAX : 3.98
+                    </p>
+                </div>
             </div>
 
-        </section>
+            <!-- กล่องที่ 5 -->
+            <div class="box pink-box">
+                <h2>🏛️ คณะและมหาวิทยาลัยที่ฉันอยากเข้า</h2>
 
-
-        <!-- กล่องที่ 5 : ประวัติการศึกษา -->
-        <section class="card education-card">
-
-            <h2>ประวัติการศึกษา</h2>
-
-            <div class="education-info">
-
-                <p>
-                    ประถมศึกษา : โรงเรียนบุญประทีปวิทยาคาร
-                </p>
-
-                <p>
-                    มัธยมศึกษาตอนต้น :
-                    โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-                </p>
-
-                <p>
-                    มัธยมศึกษาตอนปลาย :
-                    โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-                </p>
-
+                <div class="info">
+                    <p>
+                        ฉันต้องการศึกษาต่อใน
+                        <strong>คณะรัฐศาสตร์ สาขาการเมืองการปกครอง
+                        จุฬาลงกรณ์มหาวิทยาลัย</strong>
+                    </p>
+                </div>
             </div>
 
-        </section>
+            <!-- กล่องที่ 6 -->
+            <div class="box pastel-pink">
+                <h2>💗 เพราะอะไรฉันจึงอยากเข้าคณะและมหาวิทยาลัยนี้</h2>
 
-    </main>
+                <div class="info">
+                    <p>
+                        ฉันอยากเข้าที่นี่เพราะ ฉันมีความชอบในเรื่องประวัติศาสตร์
+                        และการเมืองมาตั้งแต่เด็ก ฉันชอบอ่านหนังสือประวัติศาสตร์
+                        และในตอนนี้ฉันก็ยังรักในวิชานี้อยู่
+                        ทำให้ฉันอยากเข้าคณะนี้มาก
+                    </p>
+
+                    <br>
+
+                    <p>
+                        และฉันก็อยากเข้ามหาวิทยาลัยนี้ เพราะเป็นมหาวิทยาลัย
+                        ที่มีชื่อเสียง มีทุนการศึกษามาก
+                        และจะสนับสนุนให้ฉันพัฒนาตนเองได้
+                    </p>
+                </div>
+            </div>
+
+            <!-- กล่องติดต่อ -->
+            <div class="box pastel-pink">
+                <h2>📞 ข้อมูลการติดต่อ</h2>
+
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <strong>เบอร์โทรศัพท์ :</strong> 099-387-2658
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">📷</span>
+                    <strong>Instagram :</strong> user7890
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">f</span>
+                    <strong>Facebook :</strong> pin liee
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <strong>Email :</strong> s34329@banbung.ac.th
+                </div>
+            </div>
+
+            <!-- ปุ่มไปหน้าผลงาน -->
+            <div class="button-area">
+                <button class="btn" onclick="showPortfolio()">
+                    ✨ Portfolio ของฉัน ✨
+                </button>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 My Portfolio | ลูกศร สุขเจริญโชคดี
+        </footer>
+    </section>
 
 
-    <!-- ส่วนท้าย -->
-    <footer>
-        <p>© 2026 Looksorn Sukjarernchokdee</p>
-    </footer>
+    <!-- =========================
+         หน้าผลงาน
+    ========================= -->
+
+    <section id="portfolioPage" class="page">
+        <div class="container">
+
+            <div class="hero">
+                <h1>My Portfolio</h1>
+                <p>ผลงานและความภาคภูมิใจของฉัน</p>
+            </div>
+
+            <!-- ผลงานด้านวิชาการ -->
+            <div class="portfolio-box">
+                <h2>🏆 ผลงานด้านวิชาการ</h2>
+
+                <div class="certificate-grid">
+
+                    <!-- รูปที่ 1 -->
+                    <div class="certificate">
+                        <span>ใส่รูปเกียรติบัตรที่ 1<br>ที่นี่</span>
+                    </div>
+
+                    <!-- รูปที่ 2 -->
+                    <div class="certificate">
+                        <span>ใส่รูปเกียรติบัตรที่ 2<br>ที่นี่</span>
+                    </div>
+
+                    <!-- รูปที่ 3 -->
+                    <div class="certificate">
+                        <span>ใส่รูปเกียรติบัตรที่ 3<br>ที่นี่</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ผลงานด้านจิตอาสา -->
+            <div class="portfolio-box">
+                <h2>💗 ผลงานด้านจิตอาสา</h2>
+
+                <div class="volunteer-grid">
+                    <div class="certificate">
+                        <span>ใส่รูปเกียรติบัตรจิตอาสาที่นี่</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ปุ่มกลับ -->
+            <div class="button-area">
+                <button class="btn pink-btn" onclick="showHome()">
+                    🏠 กลับไปหน้าแรก
+                </button>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 My Portfolio | ลูกศร สุขเจริญโชคดี
+        </footer>
+    </section>
+
+
+    <!-- =========================
+         JavaScript
+    ========================= -->
+
+    <script>
+        function showPortfolio() {
+            document.getElementById("homePage").style.display = "none";
+            document.getElementById("portfolioPage").style.display = "block";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function showHome() {
+            document.getElementById("portfolioPage").style.display = "none";
+            document.getElementById("homePage").style.display = "block";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 
 </body>
 </html>
