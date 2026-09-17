@@ -1,7 +1,3 @@
-/* ==============================
-   ตั้งค่าพื้นฐาน
-============================== */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,51 +5,35 @@
 }
 
 body {
-    font-family: "Arial", "Tahoma", sans-serif;
-    color: #333;
+    font-family: Arial, "Tahoma", sans-serif;
     min-height: 100vh;
-    line-height: 1.8;
+    color: #333;
 }
 
-/* ==============================
-   สีพื้นหลังแต่ละหน้า
-============================== */
-
 .pink-page {
-    background: linear-gradient(135deg, #fff0f6, #ffdbea);
+    background: #ffd6e7;
 }
 
 .blue-page {
-    background: linear-gradient(135deg, #eef9ff, #d8f0ff);
+    background: #d9f1ff;
 }
 
 .gray-page {
-    background: linear-gradient(135deg, #f3f3f3, #dedede);
+    background: #eeeeee;
 }
-
-/* ==============================
-   Header
-============================== */
 
 header {
     background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 25px 15px;
     text-align: center;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    color: #555;
-    font-size: 32px;
-    margin-bottom: 12px;
+    color: #e45b91;
+    margin-bottom: 20px;
+    font-size: 36px;
 }
-
-/* ==============================
-   เมนู
-============================== */
 
 nav {
     display: flex;
@@ -64,123 +44,83 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #444;
+    color: #333;
     background: white;
-    padding: 8px 16px;
+    padding: 12px 18px;
     border-radius: 25px;
-    font-size: 15px;
     transition: 0.3s;
-    border: 1px solid #eee;
+    font-weight: bold;
 }
 
-nav a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-/* ปุ่มเมนูหน้าปัจจุบัน */
-
-.pink-page nav a.active {
-    background: #f5a9c7;
+nav a:hover,
+nav a.active {
+    background: #f58ab5;
     color: white;
 }
-
-.blue-page nav a.active {
-    background: #8bc9e8;
-    color: white;
-}
-
-.gray-page nav a.active {
-    background: #888;
-    color: white;
-}
-
-/* ==============================
-   เนื้อหาหลัก
-============================== */
 
 main {
+    width: 90%;
     max-width: 1100px;
-    margin: auto;
-    padding: 50px 25px;
-}
-
-main > h2 {
+    margin: 40px auto;
     text-align: center;
-    font-size: 38px;
-    margin-bottom: 35px;
-    color: #555;
 }
 
-/* ==============================
-   รูปโปรไฟล์
-============================== */
-
-.profile-section {
-    text-align: center;
-    margin-bottom: 35px;
+main h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
-.profile-frame {
+.profile-photo {
     width: 250px;
-    height: 300px;
-    margin: auto;
-    padding: 8px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    height: 250px;
+    margin: 0 auto 35px;
+    border: 8px solid white;
+    border-radius: 50%;
     overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    background: white;
 }
 
-.profile-frame img {
+.profile-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
 }
 
-.photo-note {
-    margin-top: 10px;
-    color: #777;
-}
-
-/* ==============================
-   กล่องข้อมูล
-============================== */
-
-.info-box {
-    background: rgba(255,255,255,0.92);
+.box {
     padding: 30px;
-    margin-bottom: 25px;
+    margin: 25px auto;
     border-radius: 20px;
-    box-shadow: 0 7px 20px rgba(0,0,0,0.08);
-    border-left: 6px solid #f2a6c2;
+    max-width: 850px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 }
 
-.blue-page .info-box {
-    border-left-color: #8bc9e8;
-}
-
-.gray-page .info-box {
-    border-left-color: #999;
-}
-
-.info-box h3 {
+.box h3 {
     font-size: 24px;
-    margin-bottom: 15px;
-    color: #555;
+    margin-bottom: 18px;
 }
 
-.info-box p {
-    font-size: 17px;
-    margin: 8px 0;
+.box p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 7px 0;
 }
 
-/* ==============================
-   ผลงานวิชาการ
-============================== */
+.light-pink {
+    background: #ffd1e2;
+}
 
-.works-container {
+.dark-pink {
+    background: #f28ab2;
+    color: white;
+}
+
+.blue-box {
+    background: #bfe8ff;
+}
+
+.works {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -190,176 +130,98 @@ main > h2 {
     background: white;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 7px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-.work-card:hover {
-    transform: translateY(-6px);
-}
-
-.work-image {
+.work-card img {
     width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 15px;
-    background: #eee;
-}
-
-.work-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #f5f5f5;
 }
 
 .work-card h3 {
-    margin-top: 18px;
-    font-size: 22px;
+    margin: 15px 0 10px;
 }
 
 .work-card p {
-    color: #666;
-    margin-top: 10px;
+    line-height: 1.7;
 }
-
-/* ==============================
-   ผลงานจิตอาสา
-============================== */
 
 .volunteer-card {
+    background: white;
     max-width: 750px;
     margin: auto;
-    background: white;
     padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-.volunteer-image {
+.volunteer-card img {
     width: 100%;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 18px;
-    background: #eee;
-}
-
-.volunteer-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
 
 .volunteer-card h3 {
     font-size: 25px;
-    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .volunteer-card p {
-    color: #666;
-    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
 }
 
-/* ==============================
-   ติดต่อ
-============================== */
-
-.contact-box {
-    max-width: 750px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.contact-item {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    box-shadow: 0 7px 20px rgba(0,0,0,0.08);
-}
-
-.contact-item > span {
-    font-size: 35px;
-}
-
-.contact-item h3 {
-    color: #555;
-}
-
-.contact-item p {
-    color: #777;
-}
-
-.end-message {
-    text-align: center;
-    margin-top: 50px;
-    padding: 35px;
+.ending {
+    margin: 60px auto;
+    padding: 40px;
     background: rgba(255,255,255,0.7);
-    border-radius: 25px;
+    border-radius: 20px;
 }
-
-.end-message h2 {
-    color: #555;
-}
-
-/* ==============================
-   Footer
-============================== */
 
 footer {
     text-align: center;
     padding: 25px;
-    background: rgba(255,255,255,0.7);
-    color: #777;
-    margin-top: 30px;
+    background: rgba(255,255,255,0.8);
+    margin-top: 50px;
 }
 
-/* ==============================
-   Responsive สำหรับมือถือ
-============================== */
-
-@media (max-width: 800px) {
+/* สำหรับมือถือ */
+@media (max-width: 768px) {
 
     header h1 {
-        font-size: 27px;
-    }
-
-    nav {
-        gap: 6px;
-    }
-
-    nav a {
-        font-size: 13px;
-        padding: 6px 10px;
-    }
-
-    main {
-        padding: 35px 15px;
-    }
-
-    main > h2 {
         font-size: 30px;
     }
 
-    .works-container {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 90%;
+        text-align: center;
+    }
+
+    .works {
         grid-template-columns: 1fr;
     }
 
-    .contact-box {
-        grid-template-columns: 1fr;
+    .profile-photo {
+        width: 200px;
+        height: 200px;
     }
 
-    .profile-frame {
-        width: 220px;
-        height: 270px;
+    .box {
+        padding: 20px;
     }
 
-    .volunteer-image {
-        height: 300px;
+    main h2 {
+        font-size: 27px;
     }
 }
